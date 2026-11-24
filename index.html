@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<link rel="icon" href="data:," />
+<title>Home Calculator — 100 Free Home &amp; DIY Calculators | Paint, Concrete, Tile, Topsoil, Pavers &amp; More</title>
+<meta name="description" content="100 free narrow home calculators, each on its own page: paint, concrete, cubic yards, tile, topsoil, sand, pavers, grout, rebar, siding, mulch, gravel and more. Enter measurements, get instant quantities." />
+<meta name="keywords" content="home calculator, cubic yard calculator, concrete calculator, paint calculator, tile calculator, mulch calculator, topsoil calculator, sand calculator, paver calculator, grout calculator, rebar calculator, siding calculator, grass seed calculator, pool volume calculator, asphalt calculator, flooring calculator, roofing calculator" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://easyhomecalculator.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Home Calculator — 100 Free Home &amp; DIY Calculators | Paint, Concrete, Tile, Topsoil, Pavers &amp; More" />
+<meta property="og:description" content="100 free narrow home calculators, each on its own page: paint, concrete, cubic yards, tile, topsoil, sand, pavers, grout, rebar, siding, mulch, gravel and more. Enter measurements, get instant quantities." />
+<meta property="og:url" content="https://easyhomecalculator.com/" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Home Calculator — 100 Free Home &amp; DIY Calculators | Paint, Concrete, Tile, Topsoil, Pavers &amp; More" />
+<meta name="twitter:description" content="100 free narrow home calculators, each on its own page: paint, concrete, cubic yards, tile, topsoil, sand, pavers, grout, rebar, siding, mulch, gravel and more. Enter measurements, get instant quantities." />
+<!-- Google Search Console: replace the content value with your verification code when the domain is live -->
+<!-- <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE" /> -->
+<!-- Google Analytics (GA4): add your Measurement ID in place of G-XXXXXXXXXX to enable analytics. No data is collected until you do. -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script> -->
+<!-- <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script> -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+
+:root{
+  --bg:#ffffff; --surface:#f6f8f6; --surface2:#eef3ef; --card:#ffffff;
+  --text:#15211a; --muted:#5b6b60; --line:#e2e9e3;
+  --accent:#147a4d; --accent-dark:#0e5c39; --accent-soft:#e6f3ea;
+  --warn:#fff7e8; --radius:18px; --radius-sm:12px;
+  --shadow:0 6px 24px rgba(20,60,35,.07);
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#0f1612; --surface:#16201a; --surface2:#1c2a21; --card:#141f18; --text:#edf3ef; --muted:#a7b8ad; --line:#27372d; --accent:#3ec47f; --accent-dark:#7ad9a4; --accent-soft:#1a3325; --warn:#2a2416; --shadow:0 6px 24px rgba(0,0,0,.35); }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Source Sans 3",system-ui,-apple-system,Segoe UI,sans-serif;font-size:17px;line-height:1.55}
+h1,h2,h3{font-family:"Plus Jakarta Sans",system-ui,sans-serif;line-height:1.15;margin:0}
+a{color:var(--accent-dark)}
+button,[role="button"],select,summary,input:not([type="checkbox"],[type="radio"]){min-height:44px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.hero{padding:44px 0 8px}
+.eyebrow{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin:0 0 10px}
+.hero h1{font-size:clamp(32px,6vw,52px);font-weight:800;max-width:760px}
+.hero p.lead{font-size:19px;color:var(--muted);max-width:680px;margin:14px 0 0}
+.answer-box{margin:26px 0 6px;background:var(--accent-soft);border-radius:var(--radius);padding:20px 22px;max-width:820px}
+.answer-box strong{display:block;font-family:"Plus Jakarta Sans",sans-serif;margin-bottom:4px}
+.answer-box p{margin:0;color:var(--text)}
+.stats{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0 4px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-size:14px;font-weight:600}
+.searchrow{display:flex;gap:10px;flex-wrap:wrap;margin:28px 0 14px}
+.searchrow input[type="search"]{flex:1 1 260px;padding:12px 16px;border:1.5px solid var(--line);border-radius:999px;background:var(--card);color:var(--text);font-size:16px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 20px}
+.filter-btn{border:1.5px solid var(--line);background:var(--card);color:var(--text);border-radius:999px;padding:9px 16px;font-weight:700;cursor:pointer;font-size:15px}
+.filter-btn[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(158px,1fr));gap:12px}
+.tool-card{text-align:left;background:var(--card);border:1.5px solid var(--line);border-radius:var(--radius);padding:16px;cursor:pointer;box-shadow:none;transition:border-color .15s, transform .15s}
+.tool-card:hover{border-color:var(--accent)}
+.tool-card[aria-pressed="true"]{border-color:var(--accent);background:var(--accent-soft)}
+.tool-card .ic{width:40px;height:40px;border-radius:10px;background:var(--surface2);display:grid;place-items:center;font-size:20px;margin-bottom:10px}
+.tool-card h3{font-size:16px;margin:0 0 4px}
+.tool-card p{margin:0;font-size:13.5px;color:var(--muted);line-height:1.4}
+.calc-panel{margin:30px 0;background:var(--card);border:1.5px solid var(--line);border-radius:22px;box-shadow:var(--shadow);overflow:hidden}
+.calc-head{padding:22px 24px 0}
+.calc-head h2{font-size:26px}
+.calc-head p{color:var(--muted);margin:6px 0 0;max-width:640px}
+.calc-body{display:grid;grid-template-columns:1fr 1fr;gap:0}
+@media(max-width:760px){.calc-body{grid-template-columns:1fr}}
+.form-side{padding:22px 24px 26px}
+.field{margin-bottom:14px}
+.field label{display:block;font-weight:700;font-size:14.5px;margin-bottom:6px}
+.field .hint{font-weight:400;color:var(--muted);font-size:13px}
+.field input,.field select{width:100%;padding:11px 13px;border:1.5px solid var(--line);border-radius:var(--radius-sm);background:var(--bg);color:var(--text);font-size:16px}
+.calc-btn{width:100%;margin-top:6px;background:var(--accent);color:#fff;border:none;border-radius:999px;padding:14px 20px;font-size:17px;font-weight:800;cursor:pointer;font-family:"Plus Jakarta Sans",sans-serif}
+.calc-btn:hover{background:var(--accent-dark)}
+.result-side{background:var(--surface);padding:22px 24px 26px;border-left:1px solid var(--line)}
+@media(max-width:760px){.result-side{border-left:none;border-top:1px solid var(--line)}}
+.result-label{font-size:13px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+.result-big{font-family:"Plus Jakarta Sans",sans-serif;font-size:clamp(36px,6vw,48px);font-weight:800;line-height:1.05;margin:6px 0 2px;color:var(--accent-dark)}
+.result-unit{font-size:18px;font-weight:700;color:var(--muted)}
+.result-sub{color:var(--muted);margin:4px 0 16px}
+.detail-table{width:100%;border-collapse:collapse;font-size:15px}
+.detail-table td{padding:8px 0;border-top:1px solid var(--line)}
+.detail-table td:last-child{text-align:right;font-weight:700;white-space:nowrap;padding-left:12px}
+.result-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+.small-btn{border:1.5px solid var(--line);background:var(--card);color:var(--text);border-radius:999px;padding:9px 15px;font-weight:700;cursor:pointer;font-size:14.5px}
+.formula{margin-top:16px;background:var(--warn);border-radius:var(--radius-sm);padding:12px 14px;font-size:14px}
+section.block{padding:36px 0 4px}
+section.block h2{font-size:28px;margin-bottom:8px}
+section.block .sub{color:var(--muted);max-width:680px;margin:0 0 18px}
+.tips{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+.tip{background:var(--surface);border-radius:var(--radius);padding:18px}
+.tip h3{font-size:16px;margin-bottom:6px}
+.tip p{margin:0;color:var(--muted);font-size:15px}
+details.faq{background:var(--card);border:1.5px solid var(--line);border-radius:var(--radius-sm);margin-bottom:10px;padding:4px 18px}
+details.faq summary{cursor:pointer;font-weight:700;padding:12px 0;font-family:"Plus Jakarta Sans",sans-serif}
+details.faq p{color:var(--muted);margin:0 0 14px}
+.share-row{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0 6px}
+.share-btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:700;border-radius:999px;padding:11px 18px;color:#fff;min-height:44px}
+.share-wa{background:#1faa55}.share-x{background:#111;color:#fff}.share-fb{background:#1877f2}
+footer{border-top:1px solid var(--line);margin-top:44px;padding:26px 0 40px;color:var(--muted);font-size:14.5px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:0 0 18px}
+.chips span{font-size:14px;font-weight:700;color:var(--muted)}
+.chip{border:1.5px solid var(--line);background:var(--surface);color:var(--text);border-radius:999px;padding:7px 13px;font-weight:600;cursor:pointer;font-size:14px;min-height:36px}
+.chip:hover{border-color:var(--accent);color:var(--accent-dark)}
+.tool-count{font-size:14.5px;color:var(--muted);margin:0 0 10px;font-weight:600}
+.empty{display:none;padding:22px;text-align:center;color:var(--muted);background:var(--surface);border-radius:var(--radius)}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+a.tool-card{text-decoration:none;color:inherit;display:block}
+a.chip{text-decoration:none;display:inline-flex;align-items:center}
+.tool-only{display:none}
+body.on-tool .tool-only{display:block}
+body.on-tool .hub-only{display:none}
+.calc-head h1{font-size:28px}
+.crumb{display:flex;gap:8px;flex-wrap:wrap;align-items:center;font-size:14.5px;color:var(--muted);padding:24px 0 0}
+.crumb a{font-weight:700;text-decoration:none}
+.crumb a:hover{text-decoration:underline}
+.backlink{display:inline-flex;align-items:center;gap:8px;margin:20px 0 0;font-weight:700;text-decoration:none;font-size:16px}
+.backlink:hover{text-decoration:underline}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}.tool-card{transition:none}}
+
+
+.crumb{font-size:15px;color:var(--muted);margin:18px 0 0}
+.crumb a{font-weight:700;text-decoration:none}
+.kw-list{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.kw-list li{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-size:14.5px}
+.kw-list li a{text-decoration:none;font-weight:600}
+.cat-label{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.hub-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.hub-card{display:block;text-decoration:none;color:var(--text)}
+.hub-card h3{font-size:16px}
+.hub-card p{color:var(--muted);font-size:14px;margin:4px 0 0}
+.search-box{width:100%;padding:12px 16px;border:1.5px solid var(--line);border-radius:999px;font-size:16px;background:var(--card);color:var(--text)}
+
+</style>
+</head>
+<body>
+<main class="wrap">
+<div class="hero">
+<p class="eyebrow">Free · No sign-up · Instant answers</p>
+<h1>100 home calculators — one for every job on your list</h1>
+<p class="lead">Not one big generic calculator — 100 narrow ones, each built for a single job: topsoil for this bed, pavers for that patio, grout for this shower. Every calculator has its own page, the way the big calculator sites do it — so you can bookmark the exact one you need, share its link, and land straight on it from search.</p>
+<div class="answer-box" aria-label="Quick answer"><strong>Quick answer</strong><p>For most home projects the math is the same: <b>area = length × width</b>, <b>volume = length × width × depth</b>, then divide by how much one bag, gallon, box or roll covers — and add 10% extra for cuts and waste. Every calculator below does this for you instantly.</p></div>
+<div class="stats"><span class="stat">100 calculators</span><span class="stat">35 yard &amp; outdoor</span><span class="stat">34 interior</span><span class="stat">31 structure &amp; build</span><span class="stat">Waste allowance included</span></div>
+</div>
+<div class="searchrow"><label class="sr-only" for="search">Search calculators</label><input type="search" class="search-box" id="search" placeholder="Search 100 calculators — try “topsoil”, “pavers”, “grout”, “rebar”…" autocomplete="off" /></div>
+<p class="tool-count" id="toolCount" aria-live="polite">Showing 100 of 100 calculators.</p>
+<section class="block" id="cat-yard"><h2>Yard &amp; Outdoor · 35</h2><p class="sub">Garden, lawn, driveway and outdoor projects — soil, mulch, pavers, fences, pools and more.</p><div class="hub-grid"><a class="tool-card hub-card" href="cubic-yard-calculator.html" data-search="cubic yard calculator volume of soil, sand, mulch or concrete for any rectangular area."><span class="ic" aria-hidden="true">📐</span><h3>Cubic Yard</h3><p>Volume of soil, sand, mulch or concrete for any rectangular area.</p></a>
+<a class="tool-card hub-card" href="asphalt-calculator.html" data-search="asphalt calculator driveways and patches — tons of hot mix asphalt by area and thickness."><span class="ic" aria-hidden="true">🛣️</span><h3>Asphalt</h3><p>Driveways and patches — tons of hot mix asphalt by area and thickness.</p></a>
+<a class="tool-card hub-card" href="mulch-calculator.html" data-search="mulch calculator bags or bulk cubic yards for garden beds at any depth."><span class="ic" aria-hidden="true">🌱</span><h3>Mulch</h3><p>Bags or bulk cubic yards for garden beds at any depth.</p></a>
+<a class="tool-card hub-card" href="gravel-calculator.html" data-search="gravel calculator gravel and crushed stone — cubic yards and tons for paths and driveways."><span class="ic" aria-hidden="true">🪨</span><h3>Gravel</h3><p>Gravel and crushed stone — cubic yards and tons for paths and driveways.</p></a>
+<a class="tool-card hub-card" href="fence-calculator.html" data-search="fence calculator posts, rails and pickets for a straight run of wooden fence."><span class="ic" aria-hidden="true">🚧</span><h3>Fence</h3><p>Posts, rails and pickets for a straight run of wooden fence.</p></a>
+<a class="tool-card hub-card" href="deck-calculator.html" data-search="deck board calculator deck boards and screws for a rectangular deck."><span class="ic" aria-hidden="true">🪟</span><h3>Deck Board</h3><p>Deck boards and screws for a rectangular deck.</p></a>
+<a class="tool-card hub-card" href="sod-calculator.html" data-search="sod / lawn calculator sod pieces and pallets for a new lawn, with overlap waste."><span class="ic" aria-hidden="true">🌿</span><h3>Sod / Lawn</h3><p>Sod pieces and pallets for a new lawn, with overlap waste.</p></a>
+<a class="tool-card hub-card" href="topsoil-calculator.html" data-search="topsoil calculator topsoil for lawns, beds and levelling — bags or bulk cubic yards."><span class="ic" aria-hidden="true">🌱</span><h3>Topsoil</h3><p>Topsoil for lawns, beds and levelling — bags or bulk cubic yards.</p></a>
+<a class="tool-card hub-card" href="sand-calculator.html" data-search="sand calculator play sand, masonry sand and bedding sand — tons and cubic yards by depth."><span class="ic" aria-hidden="true">🏖️</span><h3>Sand</h3><p>Play sand, masonry sand and bedding sand — tons and cubic yards by depth.</p></a>
+<a class="tool-card hub-card" href="fill-dirt-calculator.html" data-search="fill dirt calculator fill dirt for raising and levelling ground — tons and cubic yards."><span class="ic" aria-hidden="true">🚜</span><h3>Fill Dirt</h3><p>Fill dirt for raising and levelling ground — tons and cubic yards.</p></a>
+<a class="tool-card hub-card" href="compost-calculator.html" data-search="compost calculator compost for garden beds and lawn top-dressing — bags or bulk."><span class="ic" aria-hidden="true">🍂</span><h3>Compost</h3><p>Compost for garden beds and lawn top-dressing — bags or bulk.</p></a>
+<a class="tool-card hub-card" href="landscape-rock-calculator.html" data-search="landscape rock calculator decorative landscape rock ground cover — tons by area and depth."><span class="ic" aria-hidden="true">🪨</span><h3>Landscape Rock</h3><p>Decorative landscape rock ground cover — tons by area and depth.</p></a>
+<a class="tool-card hub-card" href="pea-gravel-calculator.html" data-search="pea gravel calculator pea gravel for paths, play areas and drainage — tons and yards."><span class="ic" aria-hidden="true">⚪</span><h3>Pea Gravel</h3><p>Pea gravel for paths, play areas and drainage — tons and yards.</p></a>
+<a class="tool-card hub-card" href="river-rock-calculator.html" data-search="river rock calculator river rock for beds, borders and dry creek beds — tons by depth."><span class="ic" aria-hidden="true">🌊</span><h3>River Rock</h3><p>River rock for beds, borders and dry creek beds — tons by depth.</p></a>
+<a class="tool-card hub-card" href="crushed-stone-calculator.html" data-search="crushed stone calculator crushed stone and crusher run for bases and driveways — tons."><span class="ic" aria-hidden="true">⛏️</span><h3>Crushed Stone</h3><p>Crushed stone and crusher run for bases and driveways — tons.</p></a>
+<a class="tool-card hub-card" href="decomposed-granite-calculator.html" data-search="decomposed granite calculator decomposed granite (dg) for paths and patios — tons by depth."><span class="ic" aria-hidden="true">🟠</span><h3>Decomposed Granite</h3><p>Decomposed granite (DG) for paths and patios — tons by depth.</p></a>
+<a class="tool-card hub-card" href="paver-base-calculator.html" data-search="paver base calculator crushed paver base under patios and walkways — tons for the base layer."><span class="ic" aria-hidden="true">🧱</span><h3>Paver Base</h3><p>Crushed paver base under patios and walkways — tons for the base layer.</p></a>
+<a class="tool-card hub-card" href="paver-sand-calculator.html" data-search="paver sand calculator bedding sand under pavers — 50 lb bags by area and depth."><span class="ic" aria-hidden="true">⌛</span><h3>Paver Sand</h3><p>Bedding sand under pavers — 50 lb bags by area and depth.</p></a>
+<a class="tool-card hub-card" href="raised-bed-soil-calculator.html" data-search="raised bed soil calculator soil mix to fill a raised garden bed — bags or bulk by bed size and depth."><span class="ic" aria-hidden="true">🪴</span><h3>Raised Bed Soil</h3><p>Soil mix to fill a raised garden bed — bags or bulk by bed size and depth.</p></a>
+<a class="tool-card hub-card" href="garden-soil-calculator.html" data-search="garden soil calculator garden soil for in-ground beds — bags by bed area and depth."><span class="ic" aria-hidden="true">🌻</span><h3>Garden Soil</h3><p>Garden soil for in-ground beds — bags by bed area and depth.</p></a>
+<a class="tool-card hub-card" href="sandbox-sand-calculator.html" data-search="sandbox sand calculator play sand to fill a sandbox — 50 lb bags by size and fill depth."><span class="ic" aria-hidden="true">🪣</span><h3>Sandbox Sand</h3><p>Play sand to fill a sandbox — 50 lb bags by size and fill depth.</p></a>
+<a class="tool-card hub-card" href="lawn-fertilizer-calculator.html" data-search="lawn fertilizer calculator fertilizer bags for a lawn by area and bag coverage."><span class="ic" aria-hidden="true">🌿</span><h3>Lawn Fertilizer</h3><p>Fertilizer bags for a lawn by area and bag coverage.</p></a>
+<a class="tool-card hub-card" href="paver-calculator.html" data-search="paver calculator patio and walkway pavers — pieces by area and paver size, waste included."><span class="ic" aria-hidden="true">🧱</span><h3>Paver</h3><p>Patio and walkway pavers — pieces by area and paver size, waste included.</p></a>
+<a class="tool-card hub-card" href="retaining-wall-calculator.html" data-search="retaining wall block calculator retaining wall blocks by wall length and height, plus cap blocks."><span class="ic" aria-hidden="true">🧱</span><h3>Retaining Wall Block</h3><p>Retaining wall blocks by wall length and height, plus cap blocks.</p></a>
+<a class="tool-card hub-card" href="edging-calculator.html" data-search="landscape edging calculator landscape edging pieces and stakes for bed and path borders."><span class="ic" aria-hidden="true">〰️</span><h3>Landscape Edging</h3><p>Landscape edging pieces and stakes for bed and path borders.</p></a>
+<a class="tool-card hub-card" href="grass-seed-calculator.html" data-search="grass seed calculator grass seed pounds for a new lawn or overseeding, by area and job type."><span class="ic" aria-hidden="true">🌱</span><h3>Grass Seed</h3><p>Grass seed pounds for a new lawn or overseeding, by area and job type.</p></a>
+<a class="tool-card hub-card" href="firewood-calculator.html" data-search="firewood cord calculator cords of firewood in a stack — full cords, face cords and cubic feet."><span class="ic" aria-hidden="true">🪵</span><h3>Firewood Cord</h3><p>Cords of firewood in a stack — full cords, face cords and cubic feet.</p></a>
+<a class="tool-card hub-card" href="pool-volume-calculator.html" data-search="pool volume calculator pool water in gallons for rectangular pools — for chemicals, heaters and filling."><span class="ic" aria-hidden="true">🏊</span><h3>Pool Volume</h3><p>Pool water in gallons for rectangular pools — for chemicals, heaters and filling.</p></a>
+<a class="tool-card hub-card" href="pond-volume-calculator.html" data-search="pond volume &amp; liner calculator pond gallons plus the liner size to order, with overlap included."><span class="ic" aria-hidden="true">🐸</span><h3>Pond Volume &amp; Liner</h3><p>Pond gallons plus the liner size to order, with overlap included.</p></a>
+<a class="tool-card hub-card" href="stepping-stone-calculator.html" data-search="stepping stone calculator stepping stones for a garden path by path length and stride spacing."><span class="ic" aria-hidden="true">👣</span><h3>Stepping Stone</h3><p>Stepping stones for a garden path by path length and stride spacing.</p></a>
+<a class="tool-card hub-card" href="drip-irrigation-calculator.html" data-search="drip irrigation calculator drip emitters and tubing length for garden rows and raised beds."><span class="ic" aria-hidden="true">💧</span><h3>Drip Irrigation</h3><p>Drip emitters and tubing length for garden rows and raised beds.</p></a>
+<a class="tool-card hub-card" href="mulch-ring-calculator.html" data-search="tree mulch ring calculator mulch bags for rings around trees by ring diameter, depth and tree count."><span class="ic" aria-hidden="true">🌳</span><h3>Tree Mulch Ring</h3><p>Mulch bags for rings around trees by ring diameter, depth and tree count.</p></a>
+<a class="tool-card hub-card" href="sealcoat-calculator.html" data-search="driveway sealcoat calculator driveway sealer buckets by driveway area and number of coats."><span class="ic" aria-hidden="true">🛣️</span><h3>Driveway Sealcoat</h3><p>Driveway sealer buckets by driveway area and number of coats.</p></a>
+<a class="tool-card hub-card" href="ice-melt-calculator.html" data-search="ice melt calculator ice melt / rock salt pounds for a driveway or walkway by area and conditions."><span class="ic" aria-hidden="true">🧊</span><h3>Ice Melt</h3><p>Ice melt / rock salt pounds for a driveway or walkway by area and conditions.</p></a>
+<a class="tool-card hub-card" href="fence-post-concrete-calculator.html" data-search="fence post concrete calculator concrete bags to set fence and mailbox posts by post count and hole size."><span class="ic" aria-hidden="true">🕳️</span><h3>Fence Post Concrete</h3><p>Concrete bags to set fence and mailbox posts by post count and hole size.</p></a>
+</div></section>
+<section class="block" id="cat-interior"><h2>Interior · 34</h2><p class="sub">Inside the house — paint, tile, flooring, lighting, heating and room-by-room jobs.</p><div class="hub-grid"><a class="tool-card hub-card" href="paint-calculator.html" data-search="paint calculator gallons for a room, minus doors and windows, for any number of coats."><span class="ic" aria-hidden="true">🎨</span><h3>Paint</h3><p>Gallons for a room, minus doors and windows, for any number of coats.</p></a>
+<a class="tool-card hub-card" href="tile-calculator.html" data-search="tile calculator floor and wall tile — pieces and boxes, with cutting waste included."><span class="ic" aria-hidden="true">🔲</span><h3>Tile</h3><p>Floor and wall tile — pieces and boxes, with cutting waste included.</p></a>
+<a class="tool-card hub-card" href="flooring-calculator.html" data-search="flooring calculator laminate, vinyl and hardwood — boxes needed for a room, waste included."><span class="ic" aria-hidden="true">🪵</span><h3>Flooring</h3><p>Laminate, vinyl and hardwood — boxes needed for a room, waste included.</p></a>
+<a class="tool-card hub-card" href="sqft-calculator.html" data-search="square footage calculator area of any rectangle in sq ft, sq metres and acres — the starting point for every project."><span class="ic" aria-hidden="true">⬜</span><h3>Square Footage</h3><p>Area of any rectangle in sq ft, sq metres and acres — the starting point for every project.</p></a>
+<a class="tool-card hub-card" href="btu-calculator.html" data-search="btu / ac size calculator heating and cooling btu for a room, and the ac tonnage to buy."><span class="ic" aria-hidden="true">❄️</span><h3>BTU / AC Size</h3><p>Heating and cooling BTU for a room, and the AC tonnage to buy.</p></a>
+<a class="tool-card hub-card" href="wallpaper-calculator.html" data-search="wallpaper calculator rolls needed for a room, allowing for pattern repeat waste."><span class="ic" aria-hidden="true">🧻</span><h3>Wallpaper</h3><p>Rolls needed for a room, allowing for pattern repeat waste.</p></a>
+<a class="tool-card hub-card" href="carpet-calculator.html" data-search="carpet calculator carpet in square yards and linear feet off a standard 12 ft roll."><span class="ic" aria-hidden="true">🟫</span><h3>Carpet</h3><p>Carpet in square yards and linear feet off a standard 12 ft roll.</p></a>
+<a class="tool-card hub-card" href="hardwood-calculator.html" data-search="hardwood flooring calculator solid and engineered hardwood — boxes by room area, waste included."><span class="ic" aria-hidden="true">🪵</span><h3>Hardwood Flooring</h3><p>Solid and engineered hardwood — boxes by room area, waste included.</p></a>
+<a class="tool-card hub-card" href="laminate-calculator.html" data-search="laminate flooring calculator laminate flooring boxes for a room, cutting waste included."><span class="ic" aria-hidden="true">▭</span><h3>Laminate Flooring</h3><p>Laminate flooring boxes for a room, cutting waste included.</p></a>
+<a class="tool-card hub-card" href="vinyl-plank-calculator.html" data-search="vinyl plank flooring calculator luxury vinyl plank (lvp) — boxes by room area, waste included."><span class="ic" aria-hidden="true">▬</span><h3>Vinyl Plank Flooring</h3><p>Luxury vinyl plank (LVP) — boxes by room area, waste included.</p></a>
+<a class="tool-card hub-card" href="underlayment-calculator.html" data-search="floor underlayment calculator foam and cork underlayment rolls under floating floors."><span class="ic" aria-hidden="true">🧻</span><h3>Floor Underlayment</h3><p>Foam and cork underlayment rolls under floating floors.</p></a>
+<a class="tool-card hub-card" href="grout-calculator.html" data-search="grout calculator grout bags for a tile job by tiled area and joint coverage."><span class="ic" aria-hidden="true">🧽</span><h3>Grout</h3><p>Grout bags for a tile job by tiled area and joint coverage.</p></a>
+<a class="tool-card hub-card" href="thinset-calculator.html" data-search="thinset mortar calculator thinset bags under tile — by tiled area and trowel size."><span class="ic" aria-hidden="true">🥣</span><h3>Thinset Mortar</h3><p>Thinset bags under tile — by tiled area and trowel size.</p></a>
+<a class="tool-card hub-card" href="backsplash-calculator.html" data-search="backsplash tile calculator kitchen and bathroom backsplash tile — pieces and boxes."><span class="ic" aria-hidden="true">🔳</span><h3>Backsplash Tile</h3><p>Kitchen and bathroom backsplash tile — pieces and boxes.</p></a>
+<a class="tool-card hub-card" href="ceiling-tile-calculator.html" data-search="ceiling tile calculator drop-ceiling and glue-up ceiling tiles — pieces and boxes."><span class="ic" aria-hidden="true">⬜</span><h3>Ceiling Tile</h3><p>Drop-ceiling and glue-up ceiling tiles — pieces and boxes.</p></a>
+<a class="tool-card hub-card" href="peel-stick-tile-calculator.html" data-search="peel and stick tile calculator peel-and-stick floor and backsplash tiles — pieces and packs."><span class="ic" aria-hidden="true">🟦</span><h3>Peel and Stick Tile</h3><p>Peel-and-stick floor and backsplash tiles — pieces and packs.</p></a>
+<a class="tool-card hub-card" href="baseboard-calculator.html" data-search="baseboard / trim calculator baseboard trim — linear feet and pieces, door openings taken off."><span class="ic" aria-hidden="true">📏</span><h3>Baseboard / Trim</h3><p>Baseboard trim — linear feet and pieces, door openings taken off.</p></a>
+<a class="tool-card hub-card" href="crown-molding-calculator.html" data-search="crown molding calculator crown molding — linear feet and pieces for a full room perimeter."><span class="ic" aria-hidden="true">👑</span><h3>Crown Molding</h3><p>Crown molding — linear feet and pieces for a full room perimeter.</p></a>
+<a class="tool-card hub-card" href="ceiling-paint-calculator.html" data-search="ceiling paint calculator ceiling paint gallons by room size and coats — ceilings drink more paint than walls."><span class="ic" aria-hidden="true">🎨</span><h3>Ceiling Paint</h3><p>Ceiling paint gallons by room size and coats — ceilings drink more paint than walls.</p></a>
+<a class="tool-card hub-card" href="primer-calculator.html" data-search="primer calculator primer gallons for new drywall, stain blocking and big colour changes."><span class="ic" aria-hidden="true">🖌️</span><h3>Primer</h3><p>Primer gallons for new drywall, stain blocking and big colour changes.</p></a>
+<a class="tool-card hub-card" href="accent-wall-calculator.html" data-search="accent wall paint calculator paint for one accent wall — in quarts, so you do not over-buy a gallon."><span class="ic" aria-hidden="true">🖼️</span><h3>Accent Wall Paint</h3><p>Paint for one accent wall — in quarts, so you do not over-buy a gallon.</p></a>
+<a class="tool-card hub-card" href="exterior-paint-calculator.html" data-search="exterior house paint calculator house exterior paint gallons by house size, wall height and coats."><span class="ic" aria-hidden="true">🏡</span><h3>Exterior House Paint</h3><p>House exterior paint gallons by house size, wall height and coats.</p></a>
+<a class="tool-card hub-card" href="countertop-calculator.html" data-search="countertop calculator countertop square footage for quotes — granite, quartz, laminate and butcher block."><span class="ic" aria-hidden="true">🍽️</span><h3>Countertop</h3><p>Countertop square footage for quotes — granite, quartz, laminate and butcher block.</p></a>
+<a class="tool-card hub-card" href="cabinet-paint-calculator.html" data-search="cabinet paint calculator cabinet paint and primer in quarts, by door and drawer-front count."><span class="ic" aria-hidden="true">🗄️</span><h3>Cabinet Paint</h3><p>Cabinet paint and primer in quarts, by door and drawer-front count.</p></a>
+<a class="tool-card hub-card" href="shower-tile-calculator.html" data-search="shower tile calculator tile for shower walls by shower size, tile height and tile size."><span class="ic" aria-hidden="true">🚿</span><h3>Shower Tile</h3><p>Tile for shower walls by shower size, tile height and tile size.</p></a>
+<a class="tool-card hub-card" href="rug-calculator.html" data-search="rug size calculator rug area and the standard rug size that fits your space."><span class="ic" aria-hidden="true">🟧</span><h3>Rug Size</h3><p>Rug area and the standard rug size that fits your space.</p></a>
+<a class="tool-card hub-card" href="curtain-calculator.html" data-search="curtain calculator curtain panels and rod width for a window, with proper fullness."><span class="ic" aria-hidden="true">🪟</span><h3>Curtain</h3><p>Curtain panels and rod width for a window, with proper fullness.</p></a>
+<a class="tool-card hub-card" href="lighting-calculator.html" data-search="lighting / lumens calculator how many lumens — and how many bulbs — a room actually needs."><span class="ic" aria-hidden="true">💡</span><h3>Lighting / Lumens</h3><p>How many lumens — and how many bulbs — a room actually needs.</p></a>
+<a class="tool-card hub-card" href="exhaust-fan-calculator.html" data-search="bathroom exhaust fan calculator exhaust fan cfm size for a bathroom, from the room volume."><span class="ic" aria-hidden="true">🌀</span><h3>Bathroom Exhaust Fan</h3><p>Exhaust fan CFM size for a bathroom, from the room volume.</p></a>
+<a class="tool-card hub-card" href="water-heater-calculator.html" data-search="water heater size calculator water heater tank size by household size and bathroom count."><span class="ic" aria-hidden="true">🚰</span><h3>Water Heater Size</h3><p>Water heater tank size by household size and bathroom count.</p></a>
+<a class="tool-card hub-card" href="closet-shelving-calculator.html" data-search="closet shelving calculator shelving boards and brackets for a closet by width and shelf count."><span class="ic" aria-hidden="true">👕</span><h3>Closet Shelving</h3><p>Shelving boards and brackets for a closet by width and shelf count.</p></a>
+<a class="tool-card hub-card" href="self-leveler-calculator.html" data-search="self-leveling compound calculator self-leveling underlayment bags by floor area and pour depth."><span class="ic" aria-hidden="true">🫗</span><h3>Self-Leveling Compound</h3><p>Self-leveling underlayment bags by floor area and pour depth.</p></a>
+<a class="tool-card hub-card" href="blinds-calculator.html" data-search="window blinds size calculator the blind size to order for inside-mount windows — deductions done for you."><span class="ic" aria-hidden="true">🪟</span><h3>Window Blinds Size</h3><p>The blind size to order for inside-mount windows — deductions done for you.</p></a>
+<a class="tool-card hub-card" href="heated-floor-calculator.html" data-search="heated floor mat calculator electric radiant heat mat size for a bathroom or kitchen floor."><span class="ic" aria-hidden="true">🔥</span><h3>Heated Floor Mat</h3><p>Electric radiant heat mat size for a bathroom or kitchen floor.</p></a>
+</div></section>
+<section class="block" id="cat-structure"><h2>Structure &amp; Build · 31</h2><p class="sub">Building work — concrete, roofing, framing, siding, joists, stairs and excavation.</p><div class="hub-grid"><a class="tool-card hub-card" href="concrete-calculator.html" data-search="concrete calculator slabs, footings and pads — volume plus how many pre-mix bags to buy."><span class="ic" aria-hidden="true">🧱</span><h3>Concrete</h3><p>Slabs, footings and pads — volume plus how many pre-mix bags to buy.</p></a>
+<a class="tool-card hub-card" href="roofing-calculator.html" data-search="roofing calculator shingle squares and bundles from roof size and pitch."><span class="ic" aria-hidden="true">🏠</span><h3>Roofing</h3><p>Shingle squares and bundles from roof size and pitch.</p></a>
+<a class="tool-card hub-card" href="drywall-calculator.html" data-search="drywall calculator sheets for walls and ceiling, plus screws and joint compound."><span class="ic" aria-hidden="true">▦</span><h3>Drywall</h3><p>Sheets for walls and ceiling, plus screws and joint compound.</p></a>
+<a class="tool-card hub-card" href="brick-calculator.html" data-search="brick calculator bricks and mortar for a wall, using standard modular brick coverage."><span class="ic" aria-hidden="true">🧱</span><h3>Brick</h3><p>Bricks and mortar for a wall, using standard modular brick coverage.</p></a>
+<a class="tool-card hub-card" href="board-foot-calculator.html" data-search="board foot calculator lumber volume in board feet from thickness, width, length and quantity."><span class="ic" aria-hidden="true">🪓</span><h3>Board Foot</h3><p>Lumber volume in board feet from thickness, width, length and quantity.</p></a>
+<a class="tool-card hub-card" href="insulation-calculator.html" data-search="insulation calculator batts and rolls for a wall or attic area by coverage per pack."><span class="ic" aria-hidden="true">🧣</span><h3>Insulation</h3><p>Batts and rolls for a wall or attic area by coverage per pack.</p></a>
+<a class="tool-card hub-card" href="plywood-calculator.html" data-search="plywood calculator plywood and osb sheets for subfloors, roofs and walls by area."><span class="ic" aria-hidden="true">🟫</span><h3>Plywood</h3><p>Plywood and OSB sheets for subfloors, roofs and walls by area.</p></a>
+<a class="tool-card hub-card" href="concrete-slab-calculator.html" data-search="concrete slab calculator concrete for a slab — cubic yards for ready-mix, or 80 lb bags for a diy pour."><span class="ic" aria-hidden="true">⬛</span><h3>Concrete Slab</h3><p>Concrete for a slab — cubic yards for ready-mix, or 80 lb bags for a DIY pour.</p></a>
+<a class="tool-card hub-card" href="concrete-footing-calculator.html" data-search="concrete footing calculator concrete for strip footings by total length, width and depth."><span class="ic" aria-hidden="true">🏗️</span><h3>Concrete Footing</h3><p>Concrete for strip footings by total length, width and depth.</p></a>
+<a class="tool-card hub-card" href="concrete-steps-calculator.html" data-search="concrete steps calculator concrete volume for solid poured steps by step count, width, rise and tread."><span class="ic" aria-hidden="true">🪜</span><h3>Concrete Steps</h3><p>Concrete volume for solid poured steps by step count, width, rise and tread.</p></a>
+<a class="tool-card hub-card" href="concrete-column-calculator.html" data-search="sonotube / concrete column calculator concrete for round sonotube footings and columns by diameter, height and count."><span class="ic" aria-hidden="true">🏛️</span><h3>Sonotube / Concrete Column</h3><p>Concrete for round sonotube footings and columns by diameter, height and count.</p></a>
+<a class="tool-card hub-card" href="rebar-calculator.html" data-search="rebar calculator rebar for a slab grid — total linear feet and 20 ft sticks by spacing."><span class="ic" aria-hidden="true">➖</span><h3>Rebar</h3><p>Rebar for a slab grid — total linear feet and 20 ft sticks by spacing.</p></a>
+<a class="tool-card hub-card" href="mortar-calculator.html" data-search="mortar calculator mortar bags for bricklaying by brick count — and the block rate too."><span class="ic" aria-hidden="true">🥣</span><h3>Mortar</h3><p>Mortar bags for bricklaying by brick count — and the block rate too.</p></a>
+<a class="tool-card hub-card" href="cement-calculator.html" data-search="cement bag calculator portland cement, sand and gravel for mixing your own concrete on site."><span class="ic" aria-hidden="true">🏭</span><h3>Cement Bag</h3><p>Portland cement, sand and gravel for mixing your own concrete on site.</p></a>
+<a class="tool-card hub-card" href="concrete-block-calculator.html" data-search="concrete block (cmu) calculator concrete blocks and mortar for a block wall, by wall size."><span class="ic" aria-hidden="true">🧱</span><h3>Concrete Block (CMU)</h3><p>Concrete blocks and mortar for a block wall, by wall size.</p></a>
+<a class="tool-card hub-card" href="stucco-calculator.html" data-search="stucco calculator stucco for a wall — square yards to cover and bags for a 3-coat job."><span class="ic" aria-hidden="true">🏠</span><h3>Stucco</h3><p>Stucco for a wall — square yards to cover and bags for a 3-coat job.</p></a>
+<a class="tool-card hub-card" href="siding-calculator.html" data-search="vinyl siding calculator vinyl siding squares and panels for a house, minus doors and windows."><span class="ic" aria-hidden="true">🏡</span><h3>Vinyl Siding</h3><p>Vinyl siding squares and panels for a house, minus doors and windows.</p></a>
+<a class="tool-card hub-card" href="stud-framing-calculator.html" data-search="stud framing calculator wall studs by wall length and spacing, plus plate lumber."><span class="ic" aria-hidden="true">🔨</span><h3>Stud Framing</h3><p>Wall studs by wall length and spacing, plus plate lumber.</p></a>
+<a class="tool-card hub-card" href="rafter-calculator.html" data-search="rafter length calculator rafter length and ridge height from building span and roof pitch."><span class="ic" aria-hidden="true">📐</span><h3>Rafter Length</h3><p>Rafter length and ridge height from building span and roof pitch.</p></a>
+<a class="tool-card hub-card" href="stair-calculator.html" data-search="stair calculator steps, riser height, total run and stringer length for a straight staircase."><span class="ic" aria-hidden="true">🪜</span><h3>Stair</h3><p>Steps, riser height, total run and stringer length for a straight staircase.</p></a>
+<a class="tool-card hub-card" href="roof-pitch-calculator.html" data-search="roof pitch calculator roof pitch, slope angle and area factor from rise and run."><span class="ic" aria-hidden="true">📏</span><h3>Roof Pitch</h3><p>Roof pitch, slope angle and area factor from rise and run.</p></a>
+<a class="tool-card hub-card" href="metal-roofing-calculator.html" data-search="metal roofing calculator metal roof panels and screws by roof size — standard panels cover 3 ft wide."><span class="ic" aria-hidden="true">🏠</span><h3>Metal Roofing</h3><p>Metal roof panels and screws by roof size — standard panels cover 3 ft wide.</p></a>
+<a class="tool-card hub-card" href="gutter-calculator.html" data-search="gutter calculator gutter length, downspouts and hangers from a house footprint."><span class="ic" aria-hidden="true">🌧️</span><h3>Gutter</h3><p>Gutter length, downspouts and hangers from a house footprint.</p></a>
+<a class="tool-card hub-card" href="attic-ventilation-calculator.html" data-search="attic ventilation calculator attic vent area by attic size — the 1-to-150 rule, split intake and exhaust."><span class="ic" aria-hidden="true">🌬️</span><h3>Attic Ventilation</h3><p>Attic vent area by attic size — the 1-to-150 rule, split intake and exhaust.</p></a>
+<a class="tool-card hub-card" href="post-hole-calculator.html" data-search="post hole calculator dirt removed and concrete per post hole, by hole count, diameter and depth."><span class="ic" aria-hidden="true">🕳️</span><h3>Post Hole</h3><p>Dirt removed and concrete per post hole, by hole count, diameter and depth.</p></a>
+<a class="tool-card hub-card" href="deck-footing-calculator.html" data-search="deck footing calculator concrete for deck footings by footing count, tube diameter and depth."><span class="ic" aria-hidden="true">🛖</span><h3>Deck Footing</h3><p>Concrete for deck footings by footing count, tube diameter and depth.</p></a>
+<a class="tool-card hub-card" href="drywall-mud-calculator.html" data-search="drywall mud &amp; tape calculator joint compound and tape for finishing drywall, by sheet count."><span class="ic" aria-hidden="true">🪣</span><h3>Drywall Mud &amp; Tape</h3><p>Joint compound and tape for finishing drywall, by sheet count.</p></a>
+<a class="tool-card hub-card" href="joist-calculator.html" data-search="floor joist calculator floor and ceiling joist count by building length, spacing and span."><span class="ic" aria-hidden="true">🪵</span><h3>Floor Joist</h3><p>Floor and ceiling joist count by building length, spacing and span.</p></a>
+<a class="tool-card hub-card" href="two-by-four-calculator.html" data-search="2×4 lumber calculator total 2×4 pieces for a stud wall — studs plus top and bottom plates."><span class="ic" aria-hidden="true">🪵</span><h3>2×4 Lumber</h3><p>Total 2×4 pieces for a stud wall — studs plus top and bottom plates.</p></a>
+<a class="tool-card hub-card" href="trench-calculator.html" data-search="trench volume calculator trench digging and backfill — cubic yards of dirt by trench size."><span class="ic" aria-hidden="true">⛏️</span><h3>Trench Volume</h3><p>Trench digging and backfill — cubic yards of dirt by trench size.</p></a>
+<a class="tool-card hub-card" href="excavation-calculator.html" data-search="excavation calculator excavated soil — bank yards in the ground, loose yards for hauling, and truck loads."><span class="ic" aria-hidden="true">🚜</span><h3>Excavation</h3><p>Excavated soil — bank yards in the ground, loose yards for hauling, and truck loads.</p></a>
+</div></section>
+
+<section class="block"><h2>Measure once, buy right</h2><p class="sub">Three habits that stop the second trip to the store.</p>
+<div class="tips">
+<div class="tip"><h3>Measure in feet, depth in inches</h3><p>Length and width are almost always in feet. Depth — mulch, gravel, concrete — is in inches. Every calculator here follows that, so you don't have to convert.</p></div>
+<div class="tip"><h3>Always add the waste allowance</h3><p>10% covers cuts, spills and breakage on straight jobs. Go to 15% for diagonal tile, patterned floors, and roofs with valleys.</p></div>
+<div class="tip"><h3>Round up, never down</h3><p>Materials come in whole bags, boxes and gallons. Running short mid-job costs more than one extra bag — every result here rounds up for you.</p></div>
+</div></section>
+<section class="block"><h2>Common questions</h2><p class="sub">Straight answers, in plain words.</p>
+<details class="faq"><summary>How do I calculate how much paint I need?</summary><p>Measure each wall's width and height, add the areas together, subtract about 21 sq ft per door and 15 sq ft per window, then divide by 350 — one gallon covers roughly 350 sq ft per coat. Multiply by the number of coats.</p></details>
+<details class="faq"><summary>How many cubic yards do I need?</summary><p>Multiply length × width × depth in feet to get cubic feet, then divide by 27. If depth is in inches, divide the inches by 12 first.</p></details>
+<details class="faq"><summary>How many bags of concrete do i need?</summary><p>Work out the volume in cubic feet (length × width × thickness). An 80 lb bag makes about 0.6 cubic feet, a 60 lb bag about 0.45. Divide your volume by the bag yield and round up.</p></details>
+<details class="faq"><summary>How much extra should I buy for waste?</summary><p>Add 10% for most projects, 15% for diagonal tile, patterned flooring and complex roofs. It is already included in the defaults — you can change it in each calculator.</p></details>
+<details class="faq"><summary>What size air conditioner do I need?</summary><p>Start with about 20 BTU per square foot for a normally insulated room, more for sunny rooms, high ceilings and kitchens. Divide total BTU by 12,000 to get tons.</p></details>
+</section>
+<section class="block"><h2>Share with someone planning a project</h2><p class="sub">Send this page to a partner, contractor or family member so you're both working from the same numbers.</p>
+<div class="share-row"><a class="share-btn share-wa" href="https://wa.me/?text=Home%20Calculator%20%E2%80%94%20100%20free%20narrow%20calculators%20for%20paint%2C%20concrete%2C%20topsoil%2C%20pavers%2C%20tile%2C%20mulch%20and%20more.%20Enter%20your%20measurements%20and%20get%20exact%20quantities." target="_blank" rel="noopener">WhatsApp</a><a class="share-btn share-x" href="https://twitter.com/intent/tweet?text=Home%20Calculator%20%E2%80%94%20100%20free%20narrow%20calculators%20for%20paint%2C%20concrete%2C%20topsoil%2C%20pavers%2C%20tile%2C%20flooring%2C%20roofing%20and%20mulch." target="_blank" rel="noopener">Share on X</a><a class="share-btn share-fb" href="https://www.facebook.com/sharer/sharer.php" target="_blank" rel="noopener">Facebook</a></div></section>
+</main>
+<footer><div class="wrap">Home Calculator — estimates for planning only. Always confirm quantities against the product label and local building codes before buying or pouring. Coverage figures use standard US product yields (80 lb concrete bag ≈ 0.6 cu ft, paint ≈ 350 sq ft per gallon per coat).<br><a href="index.html">Home Calculator</a> · <a href="privacy.html">Privacy Policy</a> · <a href="about.html">About</a></div></footer>
+<script>
+document.getElementById('search').addEventListener('input',function(e){
+  var q=e.target.value.toLowerCase().trim(); var shown=0, total=0;
+  document.querySelectorAll('.hub-card').forEach(function(c){ total++; var ok=!q||c.getAttribute('data-search').indexOf(q)>-1; c.style.display=ok?'':'none'; if(ok)shown++; });
+  document.getElementById('toolCount').textContent='Showing '+shown+' of '+total+' calculators'+(q?' matching “'+q+'”':'')+'.';
+});
+</script>
+</body>
+</html>
